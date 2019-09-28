@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NFCReadViewController.swift
 //  ReaderCoreNFC
 //
 //  Created by EugenKGD on 25/02/2019.
@@ -9,7 +9,7 @@
 import UIKit
 import CoreNFC
 
-class ViewController: UIViewController {
+class NFCReadViewController: UIViewController {
     
     // MARK: - Private Variables
     
@@ -36,9 +36,12 @@ class ViewController: UIViewController {
 
 // MARK: - Private Methods
 
-fileprivate extension ViewController {
+fileprivate extension NFCReadViewController {
     func configureModels() {
         nfcManager = NFCReaderManager()
+        nfcManager?.onDidDetectMessageIntent = { [weak self] message in
+            self?.messageLabel.text = message
+        }
     }
 }
 

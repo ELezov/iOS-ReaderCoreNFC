@@ -17,9 +17,14 @@ protocol NFCReaderManagerAbstract {
 }
 
 class NFCReaderManager: NSObject, NFCReaderManagerAbstract {
+    
+    // MARK: - NFCReaderManagerAbstract
+    
     var onDidDetectMessageIntent: OnDidDetectMessageIntent?
     
-    var nfcSession: NFCNDEFReaderSession?
+    // MARK: - Private Variable
+    
+    fileprivate var nfcSession: NFCNDEFReaderSession?
     
     override init() {
         super.init()
