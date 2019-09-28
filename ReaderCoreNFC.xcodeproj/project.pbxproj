@@ -12,19 +12,8 @@
 		333B76BF222452C400B42622 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 333B76BD222452C400B42622 /* Main.storyboard */; };
 		333B76C1222452C600B42622 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 333B76C0222452C600B42622 /* Assets.xcassets */; };
 		333B76C4222452C600B42622 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 333B76C2222452C600B42622 /* LaunchScreen.storyboard */; };
-		333B76CF222452C600B42622 /* ReaderCoreNFCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B76CE222452C600B42622 /* ReaderCoreNFCTests.swift */; };
 		334562FE233F25B100A56E5E /* NFCReaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334562FD233F25B100A56E5E /* NFCReaderManager.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		333B76CB222452C600B42622 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 333B76AE222452C400B42622 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 333B76B5222452C400B42622;
-			remoteInfo = ReaderCoreNFC;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		333B76B6222452C400B42622 /* ReaderCoreNFC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReaderCoreNFC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,22 +23,12 @@
 		333B76C0222452C600B42622 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		333B76C3222452C600B42622 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		333B76C5222452C600B42622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		333B76CA222452C600B42622 /* ReaderCoreNFCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReaderCoreNFCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		333B76CE222452C600B42622 /* ReaderCoreNFCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderCoreNFCTests.swift; sourceTree = "<group>"; };
-		333B76D0222452C600B42622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		333B76D92224556E00B42622 /* ReaderCoreNFC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReaderCoreNFC.entitlements; sourceTree = "<group>"; };
 		334562FD233F25B100A56E5E /* NFCReaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReaderManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		333B76B3222452C400B42622 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		333B76C7222452C600B42622 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,7 +42,6 @@
 			isa = PBXGroup;
 			children = (
 				333B76B8222452C400B42622 /* ReaderCoreNFC */,
-				333B76CD222452C600B42622 /* ReaderCoreNFCTests */,
 				333B76B7222452C400B42622 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,7 +50,6 @@
 			isa = PBXGroup;
 			children = (
 				333B76B6222452C400B42622 /* ReaderCoreNFC.app */,
-				333B76CA222452C600B42622 /* ReaderCoreNFCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,15 +68,6 @@
 				333B76C5222452C600B42622 /* Info.plist */,
 			);
 			path = ReaderCoreNFC;
-			sourceTree = "<group>";
-		};
-		333B76CD222452C600B42622 /* ReaderCoreNFCTests */ = {
-			isa = PBXGroup;
-			children = (
-				333B76CE222452C600B42622 /* ReaderCoreNFCTests.swift */,
-				333B76D0222452C600B42622 /* Info.plist */,
-			);
-			path = ReaderCoreNFCTests;
 			sourceTree = "<group>";
 		};
 		334562FB233F258E00A56E5E /* Resources */ = {
@@ -137,24 +105,6 @@
 			productReference = 333B76B6222452C400B42622 /* ReaderCoreNFC.app */;
 			productType = "com.apple.product-type.application";
 		};
-		333B76C9222452C600B42622 /* ReaderCoreNFCTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 333B76D6222452C600B42622 /* Build configuration list for PBXNativeTarget "ReaderCoreNFCTests" */;
-			buildPhases = (
-				333B76C6222452C600B42622 /* Sources */,
-				333B76C7222452C600B42622 /* Frameworks */,
-				333B76C8222452C600B42622 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				333B76CC222452C600B42622 /* PBXTargetDependency */,
-			);
-			name = ReaderCoreNFCTests;
-			productName = ReaderCoreNFCTests;
-			productReference = 333B76CA222452C600B42622 /* ReaderCoreNFCTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -173,10 +123,6 @@
 							};
 						};
 					};
-					333B76C9222452C600B42622 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 333B76B5222452C400B42622;
-					};
 				};
 			};
 			buildConfigurationList = 333B76B1222452C400B42622 /* Build configuration list for PBXProject "ReaderCoreNFC" */;
@@ -193,7 +139,6 @@
 			projectRoot = "";
 			targets = (
 				333B76B5222452C400B42622 /* ReaderCoreNFC */,
-				333B76C9222452C600B42622 /* ReaderCoreNFCTests */,
 			);
 		};
 /* End PBXProject section */
@@ -206,13 +151,6 @@
 				333B76C4222452C600B42622 /* LaunchScreen.storyboard in Resources */,
 				333B76C1222452C600B42622 /* Assets.xcassets in Resources */,
 				333B76BF222452C400B42622 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		333B76C8222452C600B42622 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,23 +167,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		333B76C6222452C600B42622 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				333B76CF222452C600B42622 /* ReaderCoreNFCTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		333B76CC222452C600B42622 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 333B76B5222452C400B42622 /* ReaderCoreNFC */;
-			targetProxy = 333B76CB222452C600B42622 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		333B76BD222452C400B42622 /* Main.storyboard */ = {
@@ -389,14 +311,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ReaderCoreNFC/ReaderCoreNFC.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 666QUCC4GT;
+				DEVELOPMENT_TEAM = 8FX7X5MR74;
 				INFOPLIST_FILE = ReaderCoreNFC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = elezov.dev.CardNFCExample;
+				PRODUCT_BUNDLE_IDENTIFIER = kode.dev.CardNFCExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -409,57 +331,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ReaderCoreNFC/ReaderCoreNFC.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 666QUCC4GT;
+				DEVELOPMENT_TEAM = 8FX7X5MR74;
 				INFOPLIST_FILE = ReaderCoreNFC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = elezov.dev.CardNFCExample;
+				PRODUCT_BUNDLE_IDENTIFIER = kode.dev.CardNFCExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		333B76D7222452C600B42622 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ReaderCoreNFCTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elezov.ReaderCoreNFCTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReaderCoreNFC.app/ReaderCoreNFC";
-			};
-			name = Debug;
-		};
-		333B76D8222452C600B42622 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ReaderCoreNFCTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elezov.ReaderCoreNFCTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReaderCoreNFC.app/ReaderCoreNFC";
 			};
 			name = Release;
 		};
@@ -480,15 +362,6 @@
 			buildConfigurations = (
 				333B76D4222452C600B42622 /* Debug */,
 				333B76D5222452C600B42622 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		333B76D6222452C600B42622 /* Build configuration list for PBXNativeTarget "ReaderCoreNFCTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				333B76D7222452C600B42622 /* Debug */,
-				333B76D8222452C600B42622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
