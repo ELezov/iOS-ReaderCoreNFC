@@ -10,33 +10,35 @@ import UIKit
 import CoreNFC
 
 class ViewController: UIViewController {
-    var nfcSession: NFCNDEFReaderSession?
-
+    
+    // MARK: - Private Variables
+    
+    fileprivate var nfcManager: NFCReaderManagerAbstract?
+    
+    // MARK: - Outlets
+    
     @IBOutlet weak var messageLabel: UILabel!
+    
+    // MARK: - Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configureModels()
+    }
+
+    // MARK: - Actions
     
     @IBAction func scanPressed(_ sender: Any) {
         // this is our newly created IBAction
-        nfcSession = NFCNDEFReaderSession.init(delegate: self, queue: nil, invalidateAfterFirstRead: true)
-        nfcSession?.begin()
+        nfcManager?.start()
     }
-
 }
 
-extension ViewController: NFCNDEFReaderSessionDelegate {
-    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
-        print("The session was invalidated: \(error.localizedDescription)")
-    }
-    
-    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
-        // Parse the card's information
-        var result = ""
-        for payload in messages[0].records {
-            result += String.init(data: payload.payload.advanced(by: 3), encoding: .utf8)! // 1
-        }
-        
-        DispatchQueue.main.async {
-            self.messageLabel.text = result
-        }
+// MARK: - Private Methods
+
+fileprivate extension ViewController {
+    func configureModels() {
+        nfcManager = NFCReaderManager()
     }
 }
 
