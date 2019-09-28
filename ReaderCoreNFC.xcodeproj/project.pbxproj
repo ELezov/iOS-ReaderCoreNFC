@@ -13,6 +13,7 @@
 		333B76C1222452C600B42622 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 333B76C0222452C600B42622 /* Assets.xcassets */; };
 		333B76C4222452C600B42622 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 333B76C2222452C600B42622 /* LaunchScreen.storyboard */; };
 		333B76CF222452C600B42622 /* ReaderCoreNFCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333B76CE222452C600B42622 /* ReaderCoreNFCTests.swift */; };
+		334562FE233F25B100A56E5E /* NFCReaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334562FD233F25B100A56E5E /* NFCReaderManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		333B76CA222452C600B42622 /* ReaderCoreNFCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReaderCoreNFCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		333B76CE222452C600B42622 /* ReaderCoreNFCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderCoreNFCTests.swift; sourceTree = "<group>"; };
 		333B76D0222452C600B42622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		333B76D92224556E00B42622 /* ReaderCoreNFC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReaderCoreNFC.entitlements; sourceTree = "<group>"; };
+		334562FD233F25B100A56E5E /* NFCReaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCReaderManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,9 @@
 		333B76B8222452C400B42622 /* ReaderCoreNFC */ = {
 			isa = PBXGroup;
 			children = (
+				334562FC233F25A000A56E5E /* Manager */,
+				334562FB233F258E00A56E5E /* Resources */,
+				333B76D92224556E00B42622 /* ReaderCoreNFC.entitlements */,
 				333B76B9222452C400B42622 /* AppDelegate.swift */,
 				333B76BB222452C400B42622 /* ViewController.swift */,
 				333B76BD222452C400B42622 /* Main.storyboard */,
@@ -94,6 +100,21 @@
 				333B76D0222452C600B42622 /* Info.plist */,
 			);
 			path = ReaderCoreNFCTests;
+			sourceTree = "<group>";
+		};
+		334562FB233F258E00A56E5E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		334562FC233F25A000A56E5E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				334562FD233F25B100A56E5E /* NFCReaderManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +167,11 @@
 				TargetAttributes = {
 					333B76B5222452C400B42622 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.NearFieldCommunicationTagReading = {
+								enabled = 1;
+							};
+						};
 					};
 					333B76C9222452C600B42622 = {
 						CreatedOnToolsVersion = 10.1;
@@ -197,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				334562FE233F25B100A56E5E /* NFCReaderManager.swift in Sources */,
 				333B76BC222452C400B42622 /* ViewController.swift in Sources */,
 				333B76BA222452C400B42622 /* AppDelegate.swift in Sources */,
 			);
@@ -360,13 +387,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ReaderCoreNFC/ReaderCoreNFC.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 666QUCC4GT;
 				INFOPLIST_FILE = ReaderCoreNFC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elezov.ReaderCoreNFC;
+				PRODUCT_BUNDLE_IDENTIFIER = elezov.dev.CardNFCExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -377,13 +407,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ReaderCoreNFC/ReaderCoreNFC.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 666QUCC4GT;
 				INFOPLIST_FILE = ReaderCoreNFC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.elezov.ReaderCoreNFC;
+				PRODUCT_BUNDLE_IDENTIFIER = elezov.dev.CardNFCExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
